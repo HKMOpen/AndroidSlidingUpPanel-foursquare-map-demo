@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="ActionSlidingUpPanel">
+    <declare-styleable name="SlidingUpPanelLayout">
         <attr name="panelHeight" format="dimension" />
         <attr name="shadowHeight" format="dimension" />
         <attr name="paralaxOffset" format="dimension" />
