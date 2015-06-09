@@ -35,15 +35,15 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
-import com.sothree.slidinguppanel.SlidingUpPanelLayout;
+import com.sothree.slidinguppanel.ActionSlidingUpPanel;
 
 import java.util.ArrayList;
 
 
-public class MainActivity extends Activity implements SlidingUpPanelLayout.PanelSlideListener {
+public class MainActivity extends Activity implements ActionSlidingUpPanel.PanelSlideListener {
 
     private ListView mListView;
-    private SlidingUpPanelLayout mSlidingUpPanelLayout;
+    private ActionSlidingUpPanel mSlidingUpPanelLayout;
 
     private View mTransparentHeaderView;
     private View mTransparentView;
@@ -62,7 +62,7 @@ public class MainActivity extends Activity implements SlidingUpPanelLayout.Panel
         mListView = (ListView) findViewById(R.id.list);
         mListView.setOverScrollMode(ListView.OVER_SCROLL_NEVER);
 
-        mSlidingUpPanelLayout = (SlidingUpPanelLayout) findViewById(R.id.slidingLayout);
+        mSlidingUpPanelLayout = (ActionSlidingUpPanel) findViewById(R.id.slidingLayout);
         mSlidingUpPanelLayout.setEnableDragViewTouchEvents(true);
 
         int mapHeight = getResources().getDimensionPixelSize(R.dimen.map_height);
