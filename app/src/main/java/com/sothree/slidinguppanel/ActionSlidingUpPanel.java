@@ -31,9 +31,9 @@ import android.view.accessibility.AccessibilityEvent;
 import com.amberfog.mapslidingtest.app.R;
 import com.nineoldandroids.view.animation.AnimatorProxy;
 
-public class SlidingUpPanelLayout extends ViewGroup {
+public class ActionSlidingUpPanel extends ViewGroup {
 
-    private static final String TAG = SlidingUpPanelLayout.class.getSimpleName();
+    private static final String TAG = ActionSlidingUpPanel.class.getSimpleName();
 
     /**
      * Default peeking out panel height
@@ -259,15 +259,15 @@ public class SlidingUpPanelLayout extends ViewGroup {
         }
     }
 
-    public SlidingUpPanelLayout(Context context) {
+    public ActionSlidingUpPanel(Context context) {
         this(context, null);
     }
 
-    public SlidingUpPanelLayout(Context context, AttributeSet attrs) {
+    public ActionSlidingUpPanel(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public SlidingUpPanelLayout(Context context, AttributeSet attrs, int defStyle) {
+    public ActionSlidingUpPanel(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
         if(isInEditMode()) {
@@ -290,19 +290,19 @@ public class SlidingUpPanelLayout extends ViewGroup {
 
             defAttrs.recycle();
 
-            TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.SlidingUpPanelLayout);
+            TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ActionSlidingUpPanel);
 
             if (ta != null) {
-                mPanelHeight = ta.getDimensionPixelSize(R.styleable.SlidingUpPanelLayout_panelHeight, -1);
-                mShadowHeight = ta.getDimensionPixelSize(R.styleable.SlidingUpPanelLayout_shadowHeight, -1);
-                mParalaxOffset = ta.getDimensionPixelSize(R.styleable.SlidingUpPanelLayout_paralaxOffset, -1);
+                mPanelHeight = ta.getDimensionPixelSize(R.styleable.ActionSlidingUpPanel_panelHeight, -1);
+                mShadowHeight = ta.getDimensionPixelSize(R.styleable.ActionSlidingUpPanel_shadowHeight, -1);
+                mParalaxOffset = ta.getDimensionPixelSize(R.styleable.ActionSlidingUpPanel_paralaxOffset, -1);
 
-                mMinFlingVelocity = ta.getInt(R.styleable.SlidingUpPanelLayout_flingVelocity, DEFAULT_MIN_FLING_VELOCITY);
-                mCoveredFadeColor = ta.getColor(R.styleable.SlidingUpPanelLayout_fadeColor, DEFAULT_FADE_COLOR);
+                mMinFlingVelocity = ta.getInt(R.styleable.ActionSlidingUpPanel_flingVelocity, DEFAULT_MIN_FLING_VELOCITY);
+                mCoveredFadeColor = ta.getColor(R.styleable.ActionSlidingUpPanel_fadeColor, DEFAULT_FADE_COLOR);
 
-                mDragViewResId = ta.getResourceId(R.styleable.SlidingUpPanelLayout_dragView, -1);
+                mDragViewResId = ta.getResourceId(R.styleable.ActionSlidingUpPanel_dragView, -1);
 
-                mOverlayContent = ta.getBoolean(R.styleable.SlidingUpPanelLayout_overlay,DEFAULT_OVERLAY_FLAG);
+                mOverlayContent = ta.getBoolean(R.styleable.ActionSlidingUpPanel_overlay,DEFAULT_OVERLAY_FLAG);
             }
 
             ta.recycle();
